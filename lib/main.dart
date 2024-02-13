@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterspot/views/side_menu_view.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
         scaffoldBackgroundColor: const Color(0xFF121212),
         bottomAppBarTheme: const BottomAppBarTheme(color: Color(0xFF121212)),
+        primaryColor: Colors.black,
         colorScheme: ColorScheme(
           brightness: Brightness.dark,
           primary: Colors.black,
@@ -72,14 +74,10 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Expanded(
+          const Expanded(
             child: Row(
               children: [
-                Container(
-                  width: 280.0,
-                  height: double.infinity,
-                  color: Colors.green,
-                ),
+                SideMenuView()
                 // PlayListScreen
               ],
             ),
